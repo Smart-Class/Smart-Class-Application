@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="35dp"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_ds"
+        android:layout_gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/ListHeader"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColor="@color/textColor"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="15dp"
+        android:layout_margin="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        />
+        <!-- android:textAppearance="?android:attr/textAppearanceListItemSmall" -->
+</LinearLayout>

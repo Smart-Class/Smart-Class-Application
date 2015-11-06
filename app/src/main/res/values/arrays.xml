@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="linkedlistoperations">
+        <item>Add at begin</item>
+        <item>Add at end</item>
+        <item>Add at position</item>
+        <item>Delete item</item>
+        <item>Delete item at</item>
+    </string-array>
+</resources>
