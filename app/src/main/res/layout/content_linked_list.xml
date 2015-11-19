@@ -78,7 +78,9 @@
                     android:layout_margin="10dp"
                     android:padding="4dp"
                     >
-                    <RelativeLayout
+                    <LinearLayout
+                        android:id="@+id/result_box_inner"
+                        android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <RelativeLayout
@@ -103,11 +105,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:text="1220"
+                                android:text=""
                                 android:textStyle="italic"
                                 />
                         </RelativeLayout>
-                    </RelativeLayout>
+
+                    </LinearLayout>
                 </HorizontalScrollView>
 
                 <TextView
@@ -169,12 +172,14 @@
                     android:layout_width="125dp"
                     android:layout_height="wrap_content"
                     android:inputType="numberSigned"
+                    android:focusable="false"
+                    android:imeOptions="actionDone"
                     />
                 <Spinner
                     android:id="@+id/select_operation_spinner"
                     android:layout_below="@+id/enter_element_text"
                     android:layout_toRightOf="@+id/enter_element_editText"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:spinnerMode="dropdown"
                     android:entries="@array/linkedlistoperations"
