@@ -43,6 +43,33 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.bobade.suraj.wordpress.com.smartclass.MainActivity" />
         </activity>
+        <activity
+            android:name=".StackActivity"
+            android:label="Stack"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.bobade.suraj.wordpress.com.smartclass.MainActivity" />
+        </activity>
+        <activity
+            android:name=".QueueActivity"
+            android:label="@string/title_activity_queue"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.bobade.suraj.wordpress.com.smartclass.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TreeActivity"
+            android:label="@string/title_activity_tree"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="app.bobade.suraj.wordpress.com.smartclass.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

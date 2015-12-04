@@ -7,4 +7,20 @@
         <item>Delete item</item>
         <item>Delete item at</item>
     </string-array>
+
+    <string-array name="stackoperations">
+        <item>Push</item>
+        <item>Pop</item>
+        <item>StackTop</item>
+    </string-array>
+
+    <string-array name="queueoperations">
+        <item>EnQueue</item>
+        <item>DeQueue</item>
+    </string-array>
+
+    <string-array name="treeoperations">
+        <item>Add Left To Right</item>
+        <item>Delete Node</item>
+    </string-array>
 </resources>

@@ -57,11 +57,12 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id)
             {
-                Toast.makeText(getApplicationContext(),"Group Clicked " + listDataHeader.get(groupPosition), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"Group Clicked " + listDataHeader.get(groupPosition), Toast.LENGTH_SHORT).show();
                 switch (groupPosition)
                 {
                     case 2:
-
+                        Intent intent=new Intent(MainActivity.this,StackActivity.class);
+                        startActivity(intent);
                         break;
                 }
                 return false;
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onGroupCollapse(int groupPosition)
             {
-                Toast.makeText(getApplicationContext(), listDataHeader.get(groupPosition) + " Collapsed", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), listDataHeader.get(groupPosition) + " Collapsed", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -96,7 +97,7 @@ public class MainActivity extends AppCompatActivity
 
                     }
                 }
-                if(groupPosition==1)
+                if (groupPosition==1)
                 {
                     switch (childPosition)
                     {
@@ -106,7 +107,16 @@ public class MainActivity extends AppCompatActivity
                             break;
                     }
                 }
-                Toast.makeText(getApplicationContext(), listDataHeader.get(groupPosition) + " : " + listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition), Toast.LENGTH_SHORT).show();
+                if (groupPosition==3)
+                {
+                    switch (childPosition)
+                    {
+                        case 0:
+                            intent=new Intent(getApplicationContext(),QueueActivity.class);
+                            startActivity(intent);
+                            break;
+                    }
+                }
                 return false;
             }
         });
@@ -130,7 +140,7 @@ public class MainActivity extends AppCompatActivity
             listDataChild = new HashMap<String, List<String>>();
 
             // Adding child data
-            listDataHeader = Arrays.asList(new String[]{"Array", "Linked List", "Stack", "Queue", "Tree", "Graph", "Searching", "Sorting", "Algorithms"});
+            listDataHeader = Arrays.asList(new String[]{"Array", "Linked List", "Stack", "Queue", "Tree", "Graph"});
 
             List<String> ArrayL = new ArrayList<String>();
             ArrayL = Arrays.asList(new String[]{"One Dimensional Array", "Two Dimensional Array", "Three Dimensional Array"});
@@ -149,9 +159,9 @@ public class MainActivity extends AppCompatActivity
             listDataChild.put(listDataHeader.get(3),QueueL);
             listDataChild.put(listDataHeader.get(4),TreeL);
             listDataChild.put(listDataHeader.get(5),Empty);
-            listDataChild.put(listDataHeader.get(6),Empty);
-            listDataChild.put(listDataHeader.get(7),Empty);
-            listDataChild.put(listDataHeader.get(8),Empty);
+            //listDataChild.put(listDataHeader.get(6),Empty);
+            //listDataChild.put(listDataHeader.get(7),Empty);
+            //listDataChild.put(listDataHeader.get(8),Empty);
     }
 
     @Override

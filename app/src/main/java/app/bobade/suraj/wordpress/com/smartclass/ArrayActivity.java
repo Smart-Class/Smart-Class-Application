@@ -133,10 +133,10 @@ public class ArrayActivity extends AppCompatActivity
                     rando += 4;
                     element.getText().clear();
 
-                    idstring = "node" + i;
+                    idstring = "llnode" + i;
                     id = res.getIdentifier(idstring, "id", getBaseContext().getPackageName());
                     nodeL = (LinearLayout) findViewById(id);
-                    nodeL.setBackgroundColor(Color.WHITE);
+                  //nodeL.setBackgroundColor(Color.WHITE);
                     i++;
                 } else {
                     Toast.makeText(getBaseContext(), "Array Fetched", Toast.LENGTH_SHORT).show();
@@ -147,23 +147,23 @@ public class ArrayActivity extends AppCompatActivity
         });
 
 
-        img= (ImageView)findViewById(R.id.imageView);
+        /*img= (ImageView)findViewById(R.id.imageView);
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getBaseContext(), "Array Theory image Clicked", Toast.LENGTH_SHORT).show();
-                Intent in=new Intent(getBaseContext(),ScrollingActivity.class);
-                startActivity(in);
+                //Toast.makeText(getBaseContext(), "Array Theory image Clicked", Toast.LENGTH_SHORT).show();
+                //Intent in=new Intent(getBaseContext(),ScrollingActivity.class);
+                //startActivity(in);
             }
-        });
+        });*/
 
-        readTheory= (TextView)findViewById(R.id.read_theory);
+        /*readTheory= (TextView)findViewById(R.id.read_theory);
         readTheory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getBaseContext(), "Array Theory text Clicked", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

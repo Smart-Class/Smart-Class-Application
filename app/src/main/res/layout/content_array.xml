@@ -417,28 +417,6 @@
             </RelativeLayout>
                 </HorizontalScrollView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Summary"
-                android:id="@+id/summary"
-                android:textColor="@color/colorPrimaryDark"
-                android:fontFamily="sans-serif-thin"
-                android:layout_below="@+id/result"
-                android:layout_marginLeft="12dp"
-                />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:id="@+id/summaryBox"
-                android:background="@drawable/border"
-                android:layout_below="@+id/summary"
-                android:padding="10dp"
-                android:layout_margin="10dp"                >
-
-            </RelativeLayout>
             </RelativeLayout>
         </ScrollView>
 

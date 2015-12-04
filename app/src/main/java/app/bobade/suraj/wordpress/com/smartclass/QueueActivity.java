@@ -1,8 +1,8 @@
 package app.bobade.suraj.wordpress.com.smartclass;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
@@ -20,19 +20,17 @@ import android.widget.Toast;
 
 import java.util.LinkedList;
 
-public class LinkedListActivity extends AppCompatActivity
+public class QueueActivity extends AppCompatActivity
 {
     Spinner select_operation_spinner;
     EditText enter_element_editText;
 
-    //LayoutInflater layoutInflater=LayoutInflater.from(this);
-    //View llnode=layoutInflater.inflate(R.layout.llnode,null);
     LinearLayout result_box;
-    TextView llindex,llelement,llnext,lladdress,llpaddress,start_address;
+    TextView index,element,next,address,paddress;
 
     View curr_node, prev_node;
 
-    int operationChoice,input,index,address=1000;
+    int operationChoice,input,iindex,iaddress=1000;
 
     LinkedList linkedList;
 
@@ -40,19 +38,17 @@ public class LinkedListActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_linked_list);
+        setContentView(R.layout.activity_queue);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        result_box=(LinearLayout)findViewById(R.id.result_box_inner);
-
-        start_address=(TextView)findViewById(R.id.start_address);
+        result_box=(LinearLayout)findViewById(R.id.result_box);
 
         enter_element_editText=(EditText)findViewById(R.id.enter_element_editText);
 
         linkedList=new LinkedList();
 
-        ArrayAdapter spinnerAdapter=ArrayAdapter.createFromResource(this, R.array.linkedlistoperations, android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter spinnerAdapter=ArrayAdapter.createFromResource(this, R.array.stackoperations, android.R.layout.simple_spinner_dropdown_item);
         select_operation_spinner=(Spinner)findViewById(R.id.select_operation_spinner);
         select_operation_spinner.setAdapter(spinnerAdapter);
         select_operation_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -71,8 +67,7 @@ public class LinkedListActivity extends AppCompatActivity
 
         enter_element_editText.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event)
-            {
+            public boolean onTouch(View v, MotionEvent event) {
                 v.setFocusable(true);
                 v.setFocusableInTouchMode(true);
                 return false;
@@ -80,13 +75,11 @@ public class LinkedListActivity extends AppCompatActivity
         });
         enter_element_editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event)
-            {
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 boolean handled = false;
-                if (actionId == EditorInfo.IME_ACTION_DONE)
-                {
-                    Toast.makeText(getBaseContext(),"onEditorAction",Toast.LENGTH_SHORT).show();
-                    input=Integer.parseInt(enter_element_editText.getText().toString());
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    input = Integer.parseInt(enter_element_editText.getText().toString());
+                    Toast.makeText(getBaseContext(), "85", Toast.LENGTH_SHORT).show();
                     operate(input);
                     handled = true;
                 }
@@ -95,14 +88,12 @@ public class LinkedListActivity extends AppCompatActivity
         });
 
 
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),LinkedListActivity.class);
-                finish();
-                startActivity(intent);
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -114,54 +105,50 @@ public class LinkedListActivity extends AppCompatActivity
         switch (operationChoice)
         {
             case 0:
-                addAtEnd(input);
+                Toast.makeText(getBaseContext(),"110",Toast.LENGTH_SHORT).show();
+                push(input);
                 break;
         }
     }
 
-    public void addAtEnd(int input)
+    public void push(int input)
     {
         Toast.makeText(getBaseContext(),"AddAtEnd",Toast.LENGTH_SHORT).show();
 
         LayoutInflater layoutInflater=LayoutInflater.from(this);
-        curr_node=layoutInflater.inflate(R.layout.llnode, null);
+        curr_node=layoutInflater.inflate(R.layout.node, null);
 
         while(true)
         {
-            address = (int) (Math.random() * 10 + address+8);
+            iaddress = (int) (Math.random() * 10 + iaddress+8);
             if(!linkedList.contains(address))
             {
                 for(int i=0;i<8;i++)
                 {
-                    linkedList.add(address + i);
+                    linkedList.add(iaddress + i);
                 }
                 break;
             }
         }
         enter_element_editText.setText("");
 
-        llindex=(TextView)curr_node.findViewById(R.id.llindex);
-        llindex.setText(""+index);
+        index=(TextView)curr_node.findViewById(R.id.index);
+        index.setText(""+iindex);
 
-        llelement=(TextView)curr_node.findViewById(R.id.llelement);
-        llelement.setText(""+input);
+        element=(TextView)curr_node.findViewById(R.id.element);
+        element.setText("" + input);
 
-        lladdress=(TextView)curr_node.findViewById(R.id.lladdress);
-        lladdress.setText(""+address);
+        address=(TextView)curr_node.findViewById(R.id.address);
+        address.setText("" + iaddress);
 
-
-        if(index++==0)
+        if(iindex++>0)
         {
-            start_address.setText(""+address);
-            address+=4;
+            paddress=(TextView)prev_node.findViewById(R.id.next);
+            paddress.setText(""+iaddress);
         }
-        else
-        {
-            llpaddress=(TextView)prev_node.findViewById(R.id.llnext);
-            llpaddress.setText(""+address);
-        }
-
         result_box.addView(curr_node);
         prev_node=curr_node;
     }
+
+
 }

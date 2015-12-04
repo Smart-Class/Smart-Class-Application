@@ -95,4 +95,7 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_linked_list">LinkedList</string>
+    <string name="title_activity_stack">StackActivity</string>
+    <string name="title_activity_queue">Queue</string>
+    <string name="title_activity_tree">Tree</string>
 </resources>
