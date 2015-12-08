@@ -28,7 +28,7 @@ public class LinkedListActivity extends AppCompatActivity
     //LayoutInflater layoutInflater=LayoutInflater.from(this);
     //View llnode=layoutInflater.inflate(R.layout.llnode,null);
     LinearLayout result_box;
-    TextView llindex,llelement,llnext,lladdress,llpaddress,start_address;
+    TextView llindex,llelement,llnext,lladdress,llpaddress,start_address,readTheory;
 
     View curr_node, prev_node;
 
@@ -71,8 +71,7 @@ public class LinkedListActivity extends AppCompatActivity
 
         enter_element_editText.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event)
-            {
+            public boolean onTouch(View v, MotionEvent event) {
                 v.setFocusable(true);
                 v.setFocusableInTouchMode(true);
                 return false;
@@ -80,13 +79,11 @@ public class LinkedListActivity extends AppCompatActivity
         });
         enter_element_editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event)
-            {
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 boolean handled = false;
-                if (actionId == EditorInfo.IME_ACTION_DONE)
-                {
-                    Toast.makeText(getBaseContext(),"onEditorAction",Toast.LENGTH_SHORT).show();
-                    input=Integer.parseInt(enter_element_editText.getText().toString());
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    Toast.makeText(getBaseContext(), "onEditorAction", Toast.LENGTH_SHORT).show();
+                    input = Integer.parseInt(enter_element_editText.getText().toString());
                     operate(input);
                     handled = true;
                 }
@@ -94,6 +91,14 @@ public class LinkedListActivity extends AppCompatActivity
             }
         });
 
+        readTheory=(TextView)findViewById(R.id.read_theory_text);
+        readTheory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),LinkedListTheoryActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

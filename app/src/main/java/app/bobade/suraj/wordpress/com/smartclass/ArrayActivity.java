@@ -37,7 +37,7 @@ public class ArrayActivity extends AppCompatActivity
     TextView nodetext, readTheory;
     Resources res;
     Random rand;
-    LinearLayout nodeL, Linear;
+    LinearLayout nodeL;
     ImageView img;
 
 
@@ -99,8 +99,6 @@ public class ArrayActivity extends AppCompatActivity
                     sb.setEnabled(false);
                     element.setEnabled(true);
                     eb.setEnabled(true);
-                    nodetext=(TextView)findViewById(R.id.size);
-                    nodetext.setVisibility(TextView.INVISIBLE);
                     size=(EditText)findViewById(R.id.editText);
                     size.setVisibility(EditText.INVISIBLE);
                     sb.setVisibility(Button.INVISIBLE);
@@ -147,23 +145,15 @@ public class ArrayActivity extends AppCompatActivity
         });
 
 
-        /*img= (ImageView)findViewById(R.id.imageView);
-        img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Toast.makeText(getBaseContext(), "Array Theory image Clicked", Toast.LENGTH_SHORT).show();
-                //Intent in=new Intent(getBaseContext(),ScrollingActivity.class);
-                //startActivity(in);
-            }
-        });*/
 
-        /*readTheory= (TextView)findViewById(R.id.read_theory);
+        readTheory= (TextView)findViewById(R.id.read_theory);
         readTheory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getBaseContext(), "Array Theory text Clicked", Toast.LENGTH_SHORT).show();
+                Intent in=new Intent(getBaseContext(),Array1DTheoryActivity.class);
+                startActivity(in);
             }
-        });*/
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

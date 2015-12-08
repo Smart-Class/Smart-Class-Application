@@ -23,4 +23,97 @@
         <item>Add Left To Right</item>
         <item>Delete Node</item>
     </string-array>
+
+    <!--Array 1d Activity-->
+    <string-array name="array_1d_title">
+        <item>@string/array_1d_title_1</item>
+        <item>@string/array_1d_title_2</item>
+        <item>@string/array_1d_title_3</item>
+        <item>@string/array_1d_title_4</item>
+        <item>@string/array_1d_title_5</item>
+        <item>@string/array_1d_title_6</item>
+    </string-array>
+    <string-array name="array_1d_text">
+        <item>@string/array_1d_text_1</item>
+        <item>@string/array_1d_text_2</item>
+        <item>@string/array_1d_text_3</item>
+        <item>@string/array_1d_text_4</item>
+        <item>@string/array_1d_text_5</item>
+        <item>@string/array_1d_text_6</item>
+    </string-array>
+    <string-array name="array_1d_text_dis">
+        <item>@string/array_1d_text_dis_1</item>
+        <item>@string/array_1d_text_dis_2</item>
+        <item>@string/array_1d_text_dis_3</item>
+        <item>@string/array_1d_text_dis_4</item>
+        <item>@string/array_1d_text_dis_5</item>
+        <item>@string/array_1d_text_dis_6</item>
+    </string-array>
+
+    <!--Single Linked List Activity-->
+    <string-array name="linkedlist_single_title">
+        <item>@string/linkedlist_single_title_1</item>
+        <item>@string/linkedlist_single_title_2</item>
+        <item>@string/linkedlist_single_title_3</item>
+        <item>@string/linkedlist_single_title_4</item>
+        <item>@string/linkedlist_single_title_5</item>
+        <item>@string/linkedlist_single_title_6</item>
+    </string-array>
+    <string-array name="linkedlist_single_text">
+        <item>@string/linkedlist_single_text_1</item>
+        <item>@string/linkedlist_single_text_2</item>
+        <item>@string/linkedlist_single_text_3</item>
+        <item>@string/linkedlist_single_text_4</item>
+        <item>@string/linkedlist_single_text_5</item>
+        <item>@string/linkedlist_single_text_6</item>
+    </string-array>
+    <string-array name="linkedlist_single_text_dis">
+        <item>@string/linkedlist_single_text_dis_1</item>
+        <item>@string/linkedlist_single_text_dis_2</item>
+        <item>@string/linkedlist_single_text_dis_3</item>
+        <item>@string/linkedlist_single_text_dis_4</item>
+        <item>@string/linkedlist_single_text_dis_5</item>
+        <item>@string/linkedlist_single_text_dis_6</item>
+    </string-array>
+
+    <!--Stack Activity-->
+    <string-array name="stack_title">
+        <item>@string/stack_title_1</item>
+        <item>@string/stack_title_2</item>
+        <item>@string/stack_title_3</item>
+        <item>@string/stack_title_4</item>
+    </string-array>
+    <string-array name="stack_text">
+        <item>@string/stack_text_1</item>
+        <item>@string/stack_text_2</item>
+        <item>@string/stack_text_3</item>
+        <item>@string/stack_text_4</item>
+    </string-array>
+    <string-array name="stack_text_dis">
+        <item>@string/stack_text_dis_1</item>
+        <item>@string/stack_text_dis_2</item>
+        <item>@string/stack_text_dis_3</item>
+        <item>@string/stack_text_dis_4</item>
+    </string-array>
+
+    <!--Queue Activity-->
+    <string-array name="queue_simple_title">
+        <item>@string/queue_simple_title_1</item>
+        <item>@string/queue_simple_title_2</item>
+        <item>@string/queue_simple_title_3</item>
+        <item>@string/queue_simple_title_4</item>
+    </string-array>
+    <string-array name="queue_simple_text">
+        <item>@string/queue_simple_text_1</item>
+        <item>@string/queue_simple_text_2</item>
+        <item>@string/queue_simple_text_3</item>
+        <item>@string/queue_simple_text_4</item>
+    </string-array>
+    <string-array name="queue_simple_text_dis">
+        <item>@string/queue_simple_text_dis_1</item>
+        <item>@string/queue_simple_text_dis_2</item>
+        <item>@string/queue_simple_text_dis_3</item>
+        <item>@string/queue_simple_text_dis_4</item>
+    </string-array>
+
 </resources>

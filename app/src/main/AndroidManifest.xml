@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="app.bobade.suraj.wordpress.com.smartclass" >
+    package="app.bobade.suraj.wordpress.com.smartclass">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,21 +24,16 @@
             android:label="Arrays"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan" >
+            android:windowSoftInputMode="adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.bobade.suraj.wordpress.com.smartclass.MainActivity" />
         </activity>
         <activity
-            android:name=".ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-        <activity
             android:name=".LinkedListActivity"
             android:label="@string/title_activity_linked_list"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.bobade.suraj.wordpress.com.smartclass.MainActivity" />
@@ -47,7 +42,7 @@
             android:name=".StackActivity"
             android:label="Stack"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.bobade.suraj.wordpress.com.smartclass.MainActivity" />
@@ -56,7 +51,7 @@
             android:name=".QueueActivity"
             android:label="@string/title_activity_queue"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.bobade.suraj.wordpress.com.smartclass.MainActivity" />
@@ -65,11 +60,31 @@
             android:name=".TreeActivity"
             android:label="@string/title_activity_tree"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="app.bobade.suraj.wordpress.com.smartclass.MainActivity" />
         </activity>
+        <activity
+            android:name=".Array1DTheoryActivity"
+            android:label="@string/title_activity_array1_dtheory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LinkedListTheoryActivity"
+            android:label="@string/title_activity_linked_list_theory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StackTheoryActivity"
+            android:label="@string/title_activity_stack_theory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QueueTheoryActivity"
+            android:label="@string/title_activity_queue_theory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

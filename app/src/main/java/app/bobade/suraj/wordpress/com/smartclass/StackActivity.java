@@ -1,5 +1,6 @@
 package app.bobade.suraj.wordpress.com.smartclass;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -26,7 +27,7 @@ public class StackActivity extends AppCompatActivity
     EditText enter_element_editText;
 
     LinearLayout result_box;
-    TextView index,element,next,address,paddress;
+    TextView index,element,next,address,paddress, readTheory;
 
     View curr_node, prev_node;
 
@@ -53,15 +54,13 @@ public class StackActivity extends AppCompatActivity
         select_operation_spinner.setAdapter(spinnerAdapter);
         select_operation_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 operationChoice = position;
                 enter_element_editText.setEnabled(true);
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
+            public void onNothingSelected(AdapterView<?> parent) {
                 enter_element_editText.setEnabled(false);
             }
         });
@@ -79,16 +78,26 @@ public class StackActivity extends AppCompatActivity
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 boolean handled = false;
-                if (actionId == EditorInfo.IME_ACTION_DONE)
-                {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
                     input = Integer.parseInt(enter_element_editText.getText().toString());
-                    Toast.makeText(getBaseContext(),"85",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getBaseContext(), "85", Toast.LENGTH_SHORT).show();
                     operate(input);
                     handled = true;
                 }
                 return handled;
             }
         });
+
+
+        readTheory=(TextView)findViewById(R.id.read_theory_text);
+        readTheory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getApplicationContext(), StackTheoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

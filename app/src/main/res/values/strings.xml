@@ -4,98 +4,111 @@
     <string name="action_help">Help</string>
     <string name="action_about">About</string>
     <string name="title_activity_array">ArrayActivity</string>
-    <string name="title_activity_scrolling">ScrollingActivity</string>
-    <string name="large_text">
-        "Material is the metaphor.\n\n"
 
-        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
-        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
-        "technologically advanced and open to imagination and magic.\n"
-        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
-        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
-        "flexibility of the material creates new affordances that supercede those in the physical "
-        "world, without breaking the rules of physics.\n"
-        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
-        "interact, and exist in space and in relation to each other. Realistic lighting shows "
-        "seams, divides space, and indicates moving parts.\n\n"
-
-        "Bold, graphic, intentional.\n\n"
-
-        "The foundational elements of print based design typography, grids, space, scale, color, "
-        "and use of imagery guide visual treatments. These elements do far more than please the "
-        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
-        "imagery, large scale typography, and intentional white space create a bold and graphic "
-        "interface that immerse the user in the experience.\n"
-        "An emphasis on user actions makes core functionality immediately apparent and provides "
-        "waypoints for the user.\n\n"
-
-        "Motion provides meaning.\n\n"
-
-        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
-        "inflection points that initiate motion, transforming the whole design.\n"
-        "All action takes place in a single environment. Objects are presented to the user without "
-        "breaking the continuity of experience even as they transform and reorganize.\n"
-        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
-        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
-
-        "3D world.\n\n"
-
-        "The material environment is a 3D space, which means all objects have x, y, and z "
-        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
-        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
-        "position along the z-axis and has a standard 1dp thickness.\n"
-        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
-        "emulated by manipulating the y-axis.\n\n"
-
-        "Light and shadow.\n\n"
-
-        "Within the material environment, virtual lights illuminate the scene. Key lights create "
-        "directional shadows, while ambient light creates soft shadows from all angles.\n"
-        "Shadows in the material environment are cast by these two light sources. In Android "
-        "development, shadows occur when light sources are blocked by sheets of material at "
-        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
-        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
-
-        "Resting elevation.\n\n"
-
-        "All material objects, regardless of size, have a resting elevation, or default elevation "
-        "that does not change. If an object changes elevation, it should return to its resting "
-        "elevation as soon as possible.\n\n"
-
-        "Component elevations.\n\n"
-
-        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
-        "does not vary from 6dp in one app to 16dp in another app).\n"
-        "Components may have different resting elevations across platforms, depending on the depth "
-        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
-
-        "Responsive elevation and dynamic elevation offsets.\n\n"
-
-        "Some component types have responsive elevation, meaning they change elevation in response "
-        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
-        "changes are consistently implemented using dynamic elevation offsets.\n"
-        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
-        "to the component’s resting state. They ensure that elevation changes are consistent "
-        "across actions and component types. For example, all components that lift on press have "
-        "the same elevation change relative to their resting elevation.\n"
-        "Once the input event is completed or cancelled, the component will return to its resting "
-        "elevation.\n\n"
-
-        "Avoiding elevation interference.\n\n"
-
-        "Components with responsive elevations may encounter other components as they move between "
-        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
-        "through other material, components avoid interfering with one another any number of ways, "
-        "whether on a per component basis or using the entire app layout.\n"
-        "On a component level, components can move or be removed before they cause interference. "
-        "For example, a floating action button (FAB) can disappear or move off screen before a "
-        "user picks up a card, or it can move if a snackbar appears.\n"
-        "On the layout level, design your app layout to minimize opportunities for interference. "
-        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
-        "when a user tries to pick up one of cards.\n\n"
-    </string>
     <string name="title_activity_linked_list">LinkedList</string>
     <string name="title_activity_stack">StackActivity</string>
     <string name="title_activity_queue">Queue</string>
     <string name="title_activity_tree">Tree</string>
+
+
+    <!--Array 1d Activity-->
+    <string name="title_activity_array1_dtheory">Array</string>
+
+    <string name="array_1d_title_1">What is Array?</string>
+    <string name="array_1d_text_1">An array data structure, is a data structure consisting of a collection of elements, each identified by at least one array index or key.</string>
+    <string name="array_1d_text_dis_1">(source: Wikipedia)</string>
+    <string name="array_1d_title_2">NODE structure:</string>
+    <string name="array_1d_text_2">Each node of array contains actual datatype information. (integer here).</string>
+    <string name="array_1d_text_dis_2">*for better understanding, ‘Smart Class’ uses a node with index number, data element, virtual address as a single node.*</string>
+    <string name="array_1d_title_3">Declaration/Syntax:</string>
+    <string name="array_1d_text_3">&#8226; datatype arrayName[size];</string>
+    <string name="array_1d_text_dis_3">Ex: int arr[4];</string>
+    <string name="array_1d_title_4">Advantages:</string>
+    <string name="array_1d_text_4">&#8226;	Least possible memory is consumed for data storage compared to all other data structures.\n&#8226;	Accessing elements is easy and efficient.</string>
+    <string name="array_1d_text_dis_4"> </string>
+    <string name="array_1d_title_5">Disadvantages:</string>
+    <string name="array_1d_text_5">&#8226; Static size of array\n</string>
+    <string name="array_1d_text_dis_5">Dynamic array can be a ulternative</string>
+    <string name="array_1d_title_6">Complexity:</string>
+    <string name="array_1d_text_6">&#8226; Insert at End: O(1)\n&#8226; Insert at Begin: O(n)\n&#8226; Insert in between: O(n)\n&#8226; Delete from End: O(1)\n&#8226; Delete from Begin: O(n)\n&#8226; Delete in betn: O(n)</string>
+    <string name="array_1d_text_dis_6">Thus, Array is not feasible to use, when deletion of data is caried out frequently</string>
+
+    <!--Single Linked List Activity-->
+    <string name="title_activity_linked_list_theory">Linked List</string>
+
+    <string name="linkedlist_single_title_1">What is LinkList?</string>
+    <string name="linkedlist_single_text_1">A linked list is a data structure consisting of a group of nodes which together represent a sequence. Under the simplest form, each node is composed of data and a reference (in other words, a link) to the next node in the sequence.</string>
+    <string name="linkedlist_single_text_dis_1">(source: Wikipedia)</string>
+    <string name="linkedlist_single_title_2">NODE structure:</string>
+    <string name="linkedlist_single_text_2">Each node is divided into two parts:\n&#8226; Data Element(s).\n&#8226; Link field, contains the address of next node.</string>
+    <string name="linkedlist_single_text_dis_2">The pointer of the last node points to null value(xxxx).</string>
+    <string name="linkedlist_single_title_3">Declaration/Syntax:</string>
+    <string name="linkedlist_single_text_3"> typedef struct node {\n   datatype data;\n   struct node * next_data_address;\n } linklist_node;</string>
+    <string name="linkedlist_single_text_dis_3"> typedef struct node {\n   int number;\n   struct node * next;\n } ll_node;</string>
+    <string name="linkedlist_single_title_4">Advantages:</string>
+    <string name="linkedlist_single_text_4">&#8226; List can grow or shrink in size during runtime.\n&#8226; Memory utilization is efficient if data length is large and varying</string>
+    <string name="linkedlist_single_text_dis_4"> </string>
+    <string name="linkedlist_single_title_5">Disadvantages:</string>
+    <string name="linkedlist_single_text_5">&#8226; No direct access to Element.\n&#8226; Large Memory Overhead for small size list.</string>
+    <string name="linkedlist_single_text_dis_5"> </string>
+    <string name="linkedlist_single_title_6">Complexity:</string>
+    <string name="linkedlist_single_text_6">&#8226; Add/delete at/from begin: O(1)\n&#8226; Add/delete at/from end: O(n)\n&#8226; Add/delete in between: O(n).</string>
+    <string name="linkedlist_single_text_dis_6"> </string>
+
+
+    <!--Stack Activity-->
+    <string name="title_activity_stack_theory">Stack Theory</string>
+
+    <string name="stack_title_1">What is Stack?</string>
+    <string name="stack_text_1">A stack or LIFO (last in, first out) is a linear data structure that serves as a collection of elements, with two principal operations: push, which adds an element to the collection, and pop, which removes the last element that was added from Collection.</string>
+    <string name="stack_text_dis_1">(source: Wikipedia)</string>
+    <string name="stack_title_2">NODE structure:</string>
+    <string name="stack_text_2">Generally, Stack is implemented using LinkList Data Structure.</string>
+    <string name="stack_text_dis_2"> </string>
+    <string name="stack_title_3">Basic operations:</string>
+    <string name="stack_text_3">&#8226; Push(data);\n&#8226; pop();\n&#8226; stacktop();</string>
+    <string name="stack_text_dis_3">&#8226; Push inserts data on top in the collection.\n&#8226; pop removes data at top.\n&#8226; stacktop retrieves data from top node</string>
+    <string name="stack_title_4">Real Life Example:</string>
+    <string name="stack_text_4">&#8226; Expression Evaluation/ Conversion.\n&#8226; Recursion.\n&#8226; Arithmetic expression evaluation.\n&#8226; Compilers use stack internally.\n&#8226; Java Virtual Machine uses a stack.</string>
+    <string name="stack_text_dis_4">source:\n&#8226; ppt\'s from Prof. Dr. Smriti H. Bhandari.\n&#8226; quora.com</string>
+
+
+    <!--Queue Activity-->
+    <string name="title_activity_queue_theory">Queue Theory</string>
+
+    <string name="queue_simple_title_1">What is Queue?</string>
+    <string name="queue_simple_text_1">A queue or FIFO (First-In-First-Out) is a linear data structure that serves as a collection of elements, with two principal operations: enqueue, which adds an element to the collection, and dequeue, which removes the first element that was added in Collection.</string>
+    <string name="queue_simple_text_dis_1">(source: Wikipedia)</string>
+    <string name="queue_simple_title_2">NODE structure:</string>
+    <string name="queue_simple_text_2">Generally, Queue is implemented using LinkList Data Structure.</string>
+    <string name="queue_simple_text_dis_2"> </string>
+    <string name="queue_simple_title_3">Basic operations:</string>
+    <string name="queue_simple_text_3">&#8226; enqueue(data);\n&#8226; dequeue();\n&#8226; queuefront();\n&#8226; queuerear();</string>
+    <string name="queue_simple_text_dis_3">&#8226; enqueue inserts data at rear in the collection.\n&#8226; dequeue removes data from front.\n&#8226; queuefront retrieves data from queue front.\n&#8226; queuerear retrieves data from queue rear.</string>
+    <string name="queue_simple_title_4">Real Life Example:</string>
+    <string name="queue_simple_text_4">&#8226; OS uses queue to schedule CPU jobs.\n&#8226;	Calculator.\n&#8226; Memory Buffer uses queue.\n&#8226; Digestion. ;).</string>
+    <string name="queue_simple_text_dis_4">source:\n&#8226; ppt\'s from Prof. Dr. Smriti H. Bhandari.\n&#8226; stackexchange.com</string>
+    <string name="title_activity_about">Dream Team</string>
+
 </resources>
+
+    <!--
+    <string name="_title_1">What is DS?</string>
+    <string name="_text_1">.</string>
+    <string name="_text_dis_1">(source: Wikipedia)</string>
+    <string name="_title_2">NODE structure:</string>
+    <string name="_text_2"></string>
+    <string name="_text_dis_2"></string>
+    <string name="_title_3">Declaration/Syntax:</string>
+    <string name="_text_3">&#8226; </string>
+    <string name="_text_dis_3">Ex: </string>
+    <string name="_title_4">Advantages:</string>
+    <string name="_text_4">&#8226; A.\n&#8226;	B.</string>
+    <string name="_text_dis_4">**</string>
+    <string name="_title_5">Disadvantages:</string>
+    <string name="_text_5">&#8226; A.\n&#8226;	B.</string>
+    <string name="_text_dis_5">**</string>
+    <string name="_title_6">Complexity:</string>
+    <string name="_text_6">&#8226; Insert at End: O(1)\n&#8226; Insert at Begin: O(n)\n&#8226; Insert in between: O(n)\n&#8226; Delete from End: O(1)\n&#8226; Delete from Begin: O(n)\n&#8226; Delete in betn: O(n)</string>
+    <string name="_text_dis_6">**</string>
+-->

@@ -1,5 +1,6 @@
 package app.bobade.suraj.wordpress.com.smartclass;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -26,7 +27,7 @@ public class QueueActivity extends AppCompatActivity
     EditText enter_element_editText;
 
     LinearLayout result_box;
-    TextView index,element,next,address,paddress;
+    TextView index,element,next,address,paddress, readTheory;
 
     View curr_node, prev_node;
 
@@ -87,6 +88,16 @@ public class QueueActivity extends AppCompatActivity
             }
         });
 
+
+
+        readTheory=(TextView)findViewById(R.id.read_theory_text);
+        readTheory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getApplicationContext(), QueueTheoryActivity.class);
+                startActivity(intent);
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
