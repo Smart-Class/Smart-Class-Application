@@ -130,16 +130,14 @@ public class MainActivity extends AppCompatActivity
             listDataChild = new HashMap<String, List<String>>();
 
             // Adding child data
-            listDataHeader = Arrays.asList(new String[]{"Array", "Linked List", "Stack", "Queue", "Tree", "Graph"});
+            listDataHeader = Arrays.asList(new String[]{"Array", "Linked List", "Stack", "Queue"});
 
             List<String> ArrayL = new ArrayList<String>();
-            ArrayL = Arrays.asList(new String[]{"One Dimensional Array", "Two Dimensional Array", "Three Dimensional Array"});
+            ArrayL = Arrays.asList(new String[]{"One Dimensional Array"});
             List<String> LinkedListL = new ArrayList<String>();
-            LinkedListL = Arrays.asList(new String[]{"Singly Linked List", "Doubly Linked List", "Circular Linked List"});
+            LinkedListL = Arrays.asList(new String[]{"Linked List"});
             List<String> QueueL = new ArrayList<String>();
-            QueueL = Arrays.asList(new String[]{"Simple Queue", "Circular Queue", "Priority Queue", "Doubly Ended Queue"});
-            List<String> TreeL = new ArrayList<String>();
-            TreeL = Arrays.asList(new String[]{"Binary Tree", "Binary Search Tree", "M-way Tree", "Expression Tree"});
+            QueueL = Arrays.asList(new String[]{"Queue"});
             List<String> Empty = new ArrayList<String>();
             Empty=Arrays.asList(new String[]{});
 
@@ -147,8 +145,6 @@ public class MainActivity extends AppCompatActivity
             listDataChild.put(listDataHeader.get(1),LinkedListL);
             listDataChild.put(listDataHeader.get(2),Empty);
             listDataChild.put(listDataHeader.get(3),QueueL);
-            listDataChild.put(listDataHeader.get(4),TreeL);
-            listDataChild.put(listDataHeader.get(5),Empty);
 
     }
 
@@ -168,7 +164,8 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_help)
         {
-            return true;
+            intent =new Intent(getApplicationContext(),HelpActivity.class);
+            startActivity(intent);
         }
         if(id == R.id.action_about)
         {

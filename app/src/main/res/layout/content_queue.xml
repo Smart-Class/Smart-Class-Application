@@ -17,7 +17,7 @@
         <ScrollView
             android:id="@+id/sv1"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/border2"
             >
 
@@ -58,6 +58,7 @@
                         />
 
                 </LinearLayout>
+
                 <TextView
                     android:id="@+id/result_text"
                     android:layout_below="@+id/read_theory"
@@ -74,7 +75,7 @@
                     android:layout_below="@+id/result_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:minHeight="50dp"
+                    android:minHeight="75dp"
                     android:background="@drawable/border"
                     android:layout_margin="10dp"
                     android:padding="4dp"
@@ -86,8 +87,6 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
                         android:padding="5dp">
-
-
                     </LinearLayout>
                 </HorizontalScrollView>
 
@@ -118,58 +117,37 @@
             </RelativeLayout>
         </ScrollView>
 
-        <ScrollView
-            android:id="@+id/sv2"
-            android:layout_below="@+id/sv1"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="match_parent"
             android:background="@drawable/border2"
-            android:layout_marginTop="15dp"
+            android:layout_below="@+id/sv1"
+            android:layout_margin="10dp"
+            android:padding="4dp"
             >
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/border"
-                android:layout_margin="10dp"
-                android:padding="4dp"
+            <EditText
+                android:id="@+id/enter_element_editText"
+                android:layout_below="@+id/enter_element_text"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:focusable="false"
+                android:hint="Enter Element"
+                android:imeOptions="actionDone"
+                />
+            <Spinner
+                android:id="@+id/select_operation_spinner"
+                android:layout_below="@+id/enter_element_text"
+                android:layout_toRightOf="@+id/enter_element_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:entries="@array/queueoperations"
+                android:padding="2dp"
                 >
+            </Spinner>
+        </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/enter_element_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:fontFamily="sans-serif-thin"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:text="Enter Element"
-                    />
-                <EditText
-                    android:id="@+id/enter_element_editText"
-                    android:layout_below="@+id/enter_element_text"
-                    android:layout_width="125dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberSigned"
-                    android:focusable="false"
-                    android:imeOptions="actionDone"
-                    />
-                <Spinner
-                    android:id="@+id/select_operation_spinner"
-                    android:layout_below="@+id/enter_element_text"
-                    android:layout_toRightOf="@+id/enter_element_editText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:entries="@array/queueoperations"
-                    android:padding="2dp"
-                    >
-
-                </Spinner>
-
-
-            </RelativeLayout>
-
-        </ScrollView>
     </RelativeLayout>
 
 </ScrollView>

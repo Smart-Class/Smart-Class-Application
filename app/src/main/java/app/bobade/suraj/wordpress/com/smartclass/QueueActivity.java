@@ -25,38 +25,38 @@ public class QueueActivity extends AppCompatActivity
 {
     Spinner select_operation_spinner;
     EditText enter_element_editText;
-
     LinearLayout result_box;
-    TextView index,element,next,address,paddress, readTheory;
-
+    TextView index,element,address,paddress, readTheory;
     View curr_node, prev_node;
-
     int operationChoice,input,iindex,iaddress=1000;
-
     LinkedList linkedList;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_queue);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        result_box=(LinearLayout)findViewById(R.id.result_box);
+        result_box = (LinearLayout) findViewById(R.id.result_box);
 
-        enter_element_editText=(EditText)findViewById(R.id.enter_element_editText);
+        enter_element_editText = (EditText) findViewById(R.id.enter_element_editText);
 
-        linkedList=new LinkedList();
+        linkedList = new LinkedList();
 
-        ArrayAdapter spinnerAdapter=ArrayAdapter.createFromResource(this, R.array.stackoperations, android.R.layout.simple_spinner_dropdown_item);
-        select_operation_spinner=(Spinner)findViewById(R.id.select_operation_spinner);
+        ArrayAdapter spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.queueoperations, android.R.layout.simple_spinner_dropdown_item);
+        select_operation_spinner = (Spinner) findViewById(R.id.select_operation_spinner);
         select_operation_spinner.setAdapter(spinnerAdapter);
         select_operation_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 operationChoice = position;
-                enter_element_editText.setEnabled(true);
+                if (position == 0)
+                    enter_element_editText.setEnabled(true);
+                else {
+                    enter_element_editText.setEnabled(false);
+                    dequeue();
+                }
             }
 
             @Override
@@ -80,7 +80,6 @@ public class QueueActivity extends AppCompatActivity
                 boolean handled = false;
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     input = Integer.parseInt(enter_element_editText.getText().toString());
-                    Toast.makeText(getBaseContext(), "85", Toast.LENGTH_SHORT).show();
                     operate(input);
                     handled = true;
                 }
@@ -89,12 +88,11 @@ public class QueueActivity extends AppCompatActivity
         });
 
 
-
-        readTheory=(TextView)findViewById(R.id.read_theory_text);
+        readTheory = (TextView) findViewById(R.id.read_theory_text);
         readTheory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(getApplicationContext(), QueueTheoryActivity.class);
+                Intent intent = new Intent(getBaseContext(), QueueTheoryActivity.class);
                 startActivity(intent);
             }
         });
@@ -103,29 +101,28 @@ public class QueueActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent=new Intent(QueueActivity.this, QueueActivity.class);
+                finish();
+                startActivity(intent);
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     public void operate(int input)
     {
-        Toast.makeText(getBaseContext(),"Operate",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getBaseContext(),"Operate",Toast.LENGTH_SHORT).show();
         switch (operationChoice)
         {
             case 0:
-                Toast.makeText(getBaseContext(),"110",Toast.LENGTH_SHORT).show();
-                push(input);
+                enqueue(input);
                 break;
         }
     }
 
-    public void push(int input)
+    public void enqueue(int input)
     {
-        Toast.makeText(getBaseContext(),"AddAtEnd",Toast.LENGTH_SHORT).show();
-
         LayoutInflater layoutInflater=LayoutInflater.from(this);
         curr_node=layoutInflater.inflate(R.layout.node, null);
 
@@ -152,14 +149,33 @@ public class QueueActivity extends AppCompatActivity
         address=(TextView)curr_node.findViewById(R.id.address);
         address.setText("" + iaddress);
 
+        prev_node=result_box.getChildAt(iindex-1);
         if(iindex++>0)
         {
             paddress=(TextView)prev_node.findViewById(R.id.next);
             paddress.setText(""+iaddress);
         }
         result_box.addView(curr_node);
-        prev_node=curr_node;
     }
 
-
+    public void dequeue()
+    {
+        result_box = (LinearLayout) findViewById(R.id.result_box);
+        try{
+            curr_node = result_box.getChildAt(0);
+            result_box.removeViewAt(0);
+            iindex--;
+            for (int i = 0; i < iindex; i++)
+            {
+                curr_node = result_box.getChildAt(i);
+                index = (TextView) curr_node.findViewById(R.id.index);
+                index.setText("" + i);
+            }
+            enter_element_editText.setEnabled(true);
+            select_operation_spinner.setSelection(0);
+        }
+        catch(Exception e){
+            Toast.makeText(getBaseContext(), "operation NOT allowed..!", Toast.LENGTH_SHORT).show();
+        }
+    }
 }

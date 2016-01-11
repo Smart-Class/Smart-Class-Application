@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -57,15 +57,6 @@
                 android:value="app.bobade.suraj.wordpress.com.smartclass.MainActivity" />
         </activity>
         <activity
-            android:name=".TreeActivity"
-            android:label="@string/title_activity_tree"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="app.bobade.suraj.wordpress.com.smartclass.MainActivity" />
-        </activity>
-        <activity
             android:name=".Array1DTheoryActivity"
             android:label="@string/title_activity_array1_dtheory"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -84,6 +75,10 @@
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/title_activity_help"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

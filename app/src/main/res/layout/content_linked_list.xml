@@ -73,22 +73,25 @@
                     android:id="@+id/result_box"
                     android:layout_below="@+id/result_text"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/border"
                     android:layout_margin="10dp"
+                    android:foregroundGravity="center_vertical"
                     android:padding="4dp"
                     >
                     <LinearLayout
                         android:id="@+id/result_box_inner"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical">
                         <RelativeLayout
                             android:id="@+id/start_node"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/border2"
                             android:layout_margin="2dp"
+                            android:layout_gravity="center_vertical"
                             android:padding="2dp"
                             android:layout_centerVertical="true"
                             >
@@ -97,7 +100,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
-                                android:text="Start"
+                                android:text="Start "
                                  />
                             <TextView
                                 android:id="@+id/start_address"
@@ -113,7 +116,7 @@
                     </LinearLayout>
                 </HorizontalScrollView>
 
-                <TextView
+                <!--<TextView
                     android:id="@+id/summary_text"
                     android:layout_below="@+id/result_box"
                     android:layout_width="wrap_content"
@@ -135,7 +138,7 @@
                     android:padding="4dp"
                     >
 
-                </RelativeLayout>
+                </RelativeLayout> -->
 
             </RelativeLayout>
         </ScrollView>
@@ -184,9 +187,31 @@
                     android:spinnerMode="dropdown"
                     android:entries="@array/linkedlistoperations"
                     android:padding="2dp"
+                    android:backgroundTint="@color/cardview_light_background"
                     >
-
                 </Spinner>
+
+                <TextView
+                    android:id="@+id/enter_pos_text"
+                    android:layout_below="@+id/enter_element_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Enter Position"
+                    />
+
+                <EditText
+                    android:id="@+id/enter_pos_editText"
+                    android:layout_below="@+id/enter_pos_text"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:focusable="false"
+                    android:imeOptions="actionDone"
+                    android:enabled="false"
+                    />
 
 
             </RelativeLayout>
