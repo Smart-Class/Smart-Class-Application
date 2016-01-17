@@ -186,7 +186,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mrunal Selokar"
+                android:text="Mrunal"
                 android:id="@+id/developer3_name"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
@@ -195,7 +195,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Age : 19"
+                android:text="Age : NA"
                 android:padding="5dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
@@ -218,7 +218,6 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/mrunalks"
                     android:id="@+id/developer3_photo"
                     android:layout_weight="1"/>
                 <LinearLayout
@@ -235,7 +234,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="mrunal_selokar@outlook.com"
+                        android:text="mrunal@wceacses.org"
                         android:id="@+id/developer3_email"
                         android:padding="5dp" />
                 </LinearLayout>
